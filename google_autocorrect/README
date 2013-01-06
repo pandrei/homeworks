@@ -1,0 +1,35 @@
+/*
+ * Necula Roxana - Valentina 322CA
+ * Proiectarea Algoritmilor
+ * Tema 1 - Corectorul ortografic
+ */
+ 
+ 	Pentru rezolvarea corectorului ortografic am creat patru clase, si anume:
+ 	
+ - clasa principala, FileData, in care se gaseste:
+ 	* metoda levenshtein (in care calculez distanta levenshtein). Ideea de 
+ 	rezolvare a algoritmului este luata de pe net 
+ 	(http://www.merriampark.com/ld.htm), dar, asa cum am scris si in codul
+ 	sursa, am optimizat astfel incat sa nu creez o matrice si sa returnez ultimul
+ 	element, ci am folosit doi vectori si am returnat distantele intre string si
+ 	toate prefixele cuvantului din dictionar.
+ 	* metoda solve este functia principala, in care folosesc doua tipuri de 
+ 	implementari cu programare dinamica: una din functia levenshtein
+ 	si cea de a doua dinamica asemanatoare knapsack(rucsacul 0/1).
+ 	
+ - clasa ReadFile pentru citirea din fisier si fiecare linie a dictionarului este
+  introdusa in vectorul de tipul <obiect>.
+  
+ - clasa holder o folosesc pentru a tine un vector cu obiecte de tip holder 
+  folosit in metoda solve din clasa principala (FileData), care ma ajuta 
+  sa memorez distanta levenshtein, frecventa, numarul minim de cuvinte si
+  stringul curent, toate acestea folosite la cea de-a doua dinamica.
+  
+ - clasa obiect care are rolul unei structuri ce contine campurile cuvant si 
+ frecventa.
+ 
+ 	Complexitatea temporala a algoritmului este O(c*n) 
+ unde n = dimensiunea dictionarului;
+ 	  c = lung_input * lung_input + 1 ; lipseste "costul" unui apel levenshtein;
+ 	  costul total al apelurilor levenshtein (pentru un sir de 64 de caractere)
+ 	  este de aproximativ 1,4 secunde.

@@ -1,0 +1,24 @@
+Nume : Popescu Andrei - Constantin
+Grupa : 322 CA
+
+Logica pe care am abordat-o cand am rezolvat tema se bazeaza pe faptul ca
+in clips nu pot exista fapte identice.
+Strategia de rezolvare ar putea fi asemanata cu un bfs, cu exceptia ca
+mingea sare peste oameni.
+Verific de fiecare data daca am vreun vecin om, daca da regula de salt
+se activeaza pana cand nu mai poate sari, stergand lumile intermediare.
+Dupa ce nu mai poate sari, se revine la regula  cu vecini, verificand
+daca mai am alti oamenim, in alta directie. 
+Mi-am creeat un template nou, numit newworlds, pentru ca aveam nevoie de
+directia mingi, cred ca se putea face si fara, facand diferenta dintre
+omul pe care l-am sters/il voi sterge si pozitia curenta a mingii.
+
+Probleme aparute / care inca persista.
+Din punct de vedere al corectitudinii, tema mea rece toate testele 
+in aproximativ 10-15 min. 
+Din punctul de vedere al coding style, puteam sa fac un vector cu directii
+in loc sa am 8 if-uri. 
+Timpul efectiv de lucru a fost de aproximativ 24 de ore, majoritatea problemelor
+au fost cauzate de ordinea de activare a regulilor in clips.
+Initial aveam o regula care creea toti vecinii mingii, apoi alta regula, valid, 
+care ii stergea pe cei care nu sunt om.

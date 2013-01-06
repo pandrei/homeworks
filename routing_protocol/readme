@@ -1,0 +1,32 @@
+Popescu Andrei - Constantin
+Grupa 322CA
+
+Nu am facut nicio modificare in helpers.h sau multiproc.c
+si nici in cazurile deja implementate.
+Tema mea nu functioneaza in toate cazurile.La unele rulari executia nu se 
+opreste, totusi in general output-ul pare corect.
+Am incercat sa fac debugging cat de bine s-a putut (am lasat printf-urile in
+program, daca sunt decomentate toate iar outputul este redirectat intr-un fisier
+se poate urmari unde sunt probleme).
+Nu voi explica foarte detaliat rezolvarea problemei pentru ca enuntul era cat
+se poate de clar si nu am facut altceva decat sa "urmez indicatiile".
+
+Am preferat abordarea cu doua cozi(tema fiind oricum greu de verificat, nu 
+aveam niciun motiv sa ma complic). Am avut dificultati cu ordinea in care bagam
+elementele in noua coada(functiona, gresit, ca o stiva)
+
+Am folosit doar campul payload in care am scris perechi { vecin, cost}
+Strtok ca sa parsez inputul.
+Ca algoritmi de rutare, am incercat destul de multe variante. Initial 
+bellman-ford, dupa floyd-warshall(pentru ca era foarte usor de scris), 
+pana la urma am ramas la dijkstra folosind un vector pe post de coada. 
+(Coada din stl nu avea optiunea de get(valoare element) si nu am mai folosit 
+iterable_queue;) Am ales un vector in loc fiind cea mai simpla varianta.
+
+Imi cer scuze daca am dat explicatii "lacunare", sau daca nu am pus suficiente
+comentarii. Am incercat totusi sa mentionez toate aspectele relevante.
+Uneori executia temei se blocheaza, nu am reusit sa determin de ce, din moment
+ce de fiecare data ordinea difera. Imi trimit tema asa deoarece intru in criza 
+de timp.
+Cred ca greseala mea este de implementare si nu de rationament.
+

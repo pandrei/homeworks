@@ -1,0 +1,24 @@
+Nume : Popescu Andrei - Constantin
+Grupa 322CA
+
+ Tema 3 PA
+Implementarea folosita nu e originala ci mai degraba
+luata din laborator si dedusa din discutiile cu colegii.
+Functiile ScanFile si copy sunt triviale si nu le voi mai explica.
+Solutie :
+Initial imi creez un vector care retine numarul de vecini al fiecarui nod.
+Ma folosesc de acest vector pentru a imi creea o lista de vecini si o
+lista de capacitati.
+Functia ComputeCaps creeaza cele mentionate mai sus si aplica asupra lor
+maxflow si min_cut( functie care afiseaza rezultatul).
+Structura codului e de asa natura incat sa pastreze dimensiunea main-ului
+pe cat de mica se poate.
+O optimizare importanta este pre " saturarea" tuturor drumurilor de 3 noduri,
+evitand calculul a row *col(nu am calculat 100% exact) bfs-uri.
+Mai sunt cateva legate de modul cum se fac legaturile la drena ( din drena nu 
+ma intorc, de exemplu) dar cea de mai sus mi s-a parut cea mai inteligenta.
+Din nefericire, ideea nu imi apartine.
+
+Nu am testat decat pe primele doua teste, din cauza lipsei de timp.
+Complexitate O(V* E^2);
+
